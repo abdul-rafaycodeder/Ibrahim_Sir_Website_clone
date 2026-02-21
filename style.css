@@ -105,19 +105,77 @@ hero-main {
     background-color: rgb(255, 255, 255);
 }
 
-#Amazing-AI-Tools #Amazing-AI-Tools-h1 h1{
+#Amazing-AI-Tools #Amazing-AI-Tools-h1 h1 {
     text-align: center;
     font-size: 6vw;
     font-weight: 900;
     margin-top: 7.8vw;
 }
 
-#Amazing-AI-Tools #Amazing-AI-Tools-h1 p:nth-child(2){
+#Amazing-AI-Tools #Amazing-AI-Tools-h1 p:nth-child(2) {
     text-align: center;
     font-size: 1.5vw;
     font-weight: 500;
     color: gray;
     margin-top: 1vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 3vw;
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1 img {
+    width: 70px;
+
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 img {
+    width: 70px;
+
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 img {
+    width: 70px;
+
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1 h1 {
+    color: #7C3AED;
+
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 h1 {
+    color: #7C3AED;
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 h1 {
+    color: #7C3AED;
 }
 
