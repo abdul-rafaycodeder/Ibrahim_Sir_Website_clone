@@ -101,7 +101,7 @@ hero-main {
 
 #Amazing-AI-Tools {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: rgb(255, 255, 255);
 }
 
@@ -193,3 +193,81 @@ hero-main {
     font-weight: 700;
     margin-bottom: 15px;
 }
+/* Amazing-AI-Tools-6-devs */
+
+#Amazing-AI-Tools-6-devs {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 3vw;
+    background-color: white;
+}
+
+#Amazing-AI-Tools-6-devs #dev4 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 320px;
+}
+
+#Amazing-AI-Tools-6-devs #dev5 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 300px;
+}
+
+#Amazing-AI-Tools-6-devs #dev6 {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 320px;
+}
+
+#Amazing-AI-Tools-6-devs #dev4 img {
+    width: 70px;
+    margin-bottom: 20px;
+
+}
+
+#Amazing-AI-Tools-6-devs #dev5 img {
+    width: 70px;
+    margin-bottom: 20px;
+
+}
+
+#Amazing-AI-Tools-6-devs #dev6 img {
+    width: 70px;
+    margin-bottom: 20px;
+
+}
+
+#Amazing-AI-Tools-6-devs #dev4 h1 {
+    color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+
+#Amazing-AI-Tools-6-devs #dev5 h1 {
+    color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#Amazing-AI-Tools-6-devs #dev6 h1 {
+    color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+
