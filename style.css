@@ -52,7 +52,7 @@ hero-main {
 #hero-main #hero-text h1 {
     margin-top: 3vw;
     text-align: center;
-    font-size: 5.8vw;
+    font-size: 5vw;
     font-weight: 900;
 }
 
@@ -75,28 +75,28 @@ hero-main {
 
 @keyframes check {
     0% {
-        font-size: 5.8vw;
+        /* font-size: 5.8vw; */
         transform: translateY(20px);
     }
 
     25% {
         transform: translateY(0);
-        font-size: 6vw;
+        /* font-size: 6vw; */
     }
 
     50% {
         transform: translateY(20px);
-        font-size: 5.8vw;
+        /* font-size: 5.8vw; */
     }
 
     75% {
         transform: translateY(0);
-        font-size: 6vw;
+        /* font-size: 6vw; */
     }
 
     100% {
         transform: translateY(20px);
-        font-size: 5.8vw;
+        /* font-size: 5.8vw; */
     }
 }
 
@@ -184,6 +184,27 @@ hero-main {
     font-size: 6vw;
     font-weight: 900;
     margin-top: 7.8vw;
+    background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: colorMove3 6s linear infinite;
+
+}
+
+/* Gradient Color Animation */
+@keyframes colorMove3 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-h1 p:nth-child(2) {
@@ -210,7 +231,38 @@ hero-main {
     border-radius: 30px;
     box-shadow: 2px 1px 10px rgb(212, 212, 212);
     width: 320px;
+    position: relative;
+    width: 380px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1:hover {
+    transform: translateY(-8px);
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(124, 58, 237, 0.3),
+            transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1::before{
+    opacity: 1;
+}
+
+
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 {
     background-color: rgb(255, 255, 255);
