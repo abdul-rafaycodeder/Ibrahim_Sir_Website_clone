@@ -6,7 +6,8 @@
 
 body {
     background-image: url(./images/backImage.png);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 /* Navbar section styleing */
@@ -273,7 +274,7 @@ hero-main {
 
 #What-Our-Users-Say {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: rgb(255, 255, 255);
 }
 
@@ -300,6 +301,7 @@ hero-main {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .cards-wrapper {
@@ -310,9 +312,9 @@ hero-main {
 }
 
 .card {
-  background: #16181c;
-  border: 1px solid #2f3336;
+  background: #ffffff;
   border-radius: 16px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
