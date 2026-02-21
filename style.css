@@ -135,6 +135,7 @@ hero-main {
     padding: 30px 30px;
     border-radius: 30px;
     box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 320px;
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 {
@@ -142,6 +143,7 @@ hero-main {
     padding: 30px 30px;
     border-radius: 30px;
     box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 300px;
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 {
@@ -149,33 +151,45 @@ hero-main {
     padding: 30px 30px;
     border-radius: 30px;
     box-shadow: 2px 1px 10px rgb(212, 212, 212);
+    width: 320px;
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1 img {
     width: 70px;
+    margin-bottom: 20px;
 
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 img {
     width: 70px;
+    margin-bottom: 20px;
 
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 img {
     width: 70px;
+    margin-bottom: 20px;
 
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1 h1 {
     color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
 
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev2 h1 {
     color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 #Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev3 h1 {
     color: #7C3AED;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
-
