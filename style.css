@@ -38,6 +38,8 @@ nav #logo h1 {
 
 /* Hero section styling */
 
+
+
 hero-main {
     width: 100%;
     height: 100vh;
@@ -48,42 +50,6 @@ hero-main {
     text-align: center;
     font-size: 5.8vw;
     font-weight: 900;
-
-}
-#hero-main #hero-text  {
-    margin-top: 3vw;
-    text-align: center;
-    font-size: 5.8vw;
-    font-weight: 900;
-    animation: animate 5s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        color: #7C3AED;
-        font-size: 7vw;
-    }
-
-    25% {
-        color: #4C1D95;
-        font-size: 5.8vw;
-
-    }
-
-    50% {
-        color: #6D28D9;
-        font-size: 7vw;
-    }
-
-    75% {
-        color: #A855F7;
-        font-size: 5.8vw;
-    }
-
-    100% {
-        color: #7C3AED;
-        font-size: 7vw;
-    }
 }
 
 #hero-main #hero-text h5 {
@@ -93,6 +59,58 @@ hero-main {
     color: gray;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+#hero-main #hero-text #main-text {
+    background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: check 4s ease-in-out infinite, colorMove 6s linear infinite;
+}
+
+@keyframes check {
+    0% {
+        font-size: 5.8vw;
+        transform: translateY(20px);
+    }
+
+    25% {
+        transform: translateY(0);
+        font-size: 6vw;
+    }
+
+    50% {
+        transform: translateY(20px);
+        font-size: 5.8vw;
+    }
+
+    75% {
+        transform: translateY(0);
+        font-size: 6vw;
+    }
+
+    100% {
+        transform: translateY(20px);
+        font-size: 5.8vw;
+    }
+}
+
+/* Gradient Color Animation */
+@keyframes colorMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
 
 #hero-main #hero-button {
     display: flex;
