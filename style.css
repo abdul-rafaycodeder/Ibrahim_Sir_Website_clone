@@ -48,6 +48,42 @@ hero-main {
     text-align: center;
     font-size: 5.8vw;
     font-weight: 900;
+
+}
+#hero-main #hero-text  {
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 5.8vw;
+    font-weight: 900;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: #7C3AED;
+        font-size: 7vw;
+    }
+
+    25% {
+        color: #4C1D95;
+        font-size: 5.8vw;
+
+    }
+
+    50% {
+        color: #6D28D9;
+        font-size: 7vw;
+    }
+
+    75% {
+        color: #A855F7;
+        font-size: 5.8vw;
+    }
+
+    100% {
+        color: #7C3AED;
+        font-size: 7vw;
+    }
 }
 
 #hero-main #hero-text h5 {
@@ -417,5 +453,3 @@ hero-main {
 }
 
 /* Price section */
-
-
