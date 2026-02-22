@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navbar section -->
-    <nav>
-        <div id="logo">
-            <h1>PersonalAi</h1>
-        </div>
-        <div id="button">
-            <a href="#"><button>Get Started <i class="fa-solid fa-arrow-right"></i></button></a>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <h1>PersonalAi</h1>
+            </div>
+            <!-- hamburger toggle for mobile -->
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-menu">
+                <a href="#" class="nav-item btn primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </nav>
+    </header>
 
 
     <!-- Hero section -->
-
-    <div id="hero-main">
+    <main>
+    <section id="hero-main" class="hero-section">
         <div id="hero-text">
             <div id="main-text">
                 <h1>
@@ -47,7 +55,7 @@
 
     <!-- Amazing AI Tools Section -->
 
-    <div id="Amazing-AI-Tools">
+    <section id="Amazing-AI-Tools" class="ai-tools-section">
         <div id="Amazing-AI-Tools-h1">
             <h1>Amazing AI Tools</h1>
             <p>Explore our collection of AI tools designed to enhance your productivity and <br> creativity. From
@@ -97,7 +105,7 @@
 
     <!-- What Our Users Say -->
 
-    <div id="What-Our-Users-Say">
+    <section id="What-Our-Users-Say" class="testimonials-section">
         <div id="What-Our-Users-Say-text">
             <h1>What Our Users Say</h1>
             <p>Discover how our AI tools have transformed the way our users work and create. <br> Read their
@@ -106,7 +114,7 @@
     </div>
 
     <div class="container">
-        <div class="cards-wrapper">
+        <!-- testimonials cards container-->        <div class="cards-wrapper">
 
             <!-- Card 1 -->
             <div class="card">
@@ -241,7 +249,8 @@
 
     <section class="pricing-section">
         <h1 class="pricing-title">What Our Users Say</h1>
-        <p class="pricing-subtitle">Discover how our AI tools have transformed the way our users work and create. <br> Read their testimonials and see the impact of our innovative solutions.</p>
+        <p class="pricing-subtitle">Discover how our AI tools have transformed the way our users work and create. <br>
+            Read their testimonials and see the impact of our innovative solutions.</p>
 
         <div class="pricing-container">
             <!-- Basic Plan -->
@@ -289,6 +298,49 @@
 
         </div>
     </section>
+    </main>
+
+<!-- Footer -->
+
+<footer id="footer">
+    <div id="container">
+
+        <!-- Left Section -->
+        <div id="footer-left">
+            <h2 id="logo">Personal AI</h2>
+            <p>
+                Personal AI is a platform providing powerful AI tools to help you write
+                articles, generate images, remove backgrounds, and enhance your content efficiently.
+            </p>
+        </div>
+
+        <!-- Company Links -->
+        <div id="footer-links">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div id="footer-subscribe">
+            <h3>Subscribe</h3>
+            <form id="subscribeForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <div id="copyright">
+        Copyright 2025 © Personal AI. All rights reserved.
+    </div>
+</footer>
 
 
 

@@ -19,12 +19,37 @@ document.addEventListener('DOMContentLoaded', () => {
 const cards = document.querySelectorAll(".ai-card");
 
 cards.forEach(card => {
-    card.addEventListener("mousemove", function(e) {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+  card.addEventListener("mousemove", function (e) {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-        card.style.setProperty("--mouse-x", x + "px");
-        card.style.setProperty("--mouse-y", y + "px");
+    card.style.setProperty("--mouse-x", x + "px");
+    card.style.setProperty("--mouse-y", y + "px");
+  });
+});
+
+// Footer section
+
+// EmailJS Init
+(function () {
+  emailjs.init("YOUR_PUBLIC_KEY"); // yahan apni Public Key lagayein
+})();
+
+document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+
+  const templateParams = {
+    user_email: email
+  };
+
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+    .then(function (response) {
+      document.getElementById("message").innerText = "Subscribed successfully!";
+      document.getElementById("subscribeForm").reset();
+    }, function (error) {
+      document.getElementById("message").innerText = "Error! Try again.";
     });
 });
