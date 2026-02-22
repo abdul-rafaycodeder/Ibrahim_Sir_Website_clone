@@ -322,78 +322,68 @@ hero-main {
 
 /* Amazing-AI-Tools-6-devs */
 
-#Amazing-AI-Tools-6-devs {
-    text-align: center;
+/* Layout */
+.ai-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1vw;
-    margin-top: 3vw;
-    background-color: white;
+    gap: 30px;
 }
 
-#Amazing-AI-Tools-6-devs #dev4 {
-    background-color: rgb(255, 255, 255);
-    padding: 30px 30px;
-    border-radius: 30px;
-    box-shadow: 2px 1px 10px rgb(212, 212, 212);
+/* Card */
+.ai-card {
+    position: relative;
     width: 320px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#Amazing-AI-Tools-6-devs #dev5 {
-    background-color: rgb(255, 255, 255);
-    padding: 30px 30px;
-    border-radius: 30px;
-    box-shadow: 2px 1px 10px rgb(212, 212, 212);
-    width: 300px;
+/* Hover Lift */
+.ai-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-#Amazing-AI-Tools-6-devs #dev6 {
-    background-color: rgb(255, 255, 255);
-    padding: 30px 30px;
-    border-radius: 30px;
-    box-shadow: 2px 1px 10px rgb(212, 212, 212);
-    width: 320px;
+/* Mouse Follow Glow */
+.ai-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(124, 58, 237, 0.25),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
-#Amazing-AI-Tools-6-devs #dev4 img {
+.ai-card:hover::before {
+    opacity: 1;
+}
+
+/* Content */
+.ai-card img {
     width: 70px;
     margin-bottom: 20px;
-
 }
 
-#Amazing-AI-Tools-6-devs #dev5 img {
-    width: 70px;
-    margin-bottom: 20px;
-
-}
-
-#Amazing-AI-Tools-6-devs #dev6 img {
-    width: 70px;
-    margin-bottom: 20px;
-
-}
-
-#Amazing-AI-Tools-6-devs #dev4 h1 {
+.ai-card h2 {
     color: #7C3AED;
-    font-size: 23px;
-    font-weight: 700;
-    margin-bottom: 15px;
-
-}
-
-#Amazing-AI-Tools-6-devs #dev5 h1 {
-    color: #7C3AED;
-    font-size: 23px;
-    font-weight: 700;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
-#Amazing-AI-Tools-6-devs #dev6 h1 {
-    color: #7C3AED;
-    font-size: 23px;
-    font-weight: 700;
-    margin-bottom: 15px;
+.ai-card p {
+    color: #555;
+    line-height: 1.6;
 }
 
 /* What Our Users Say */
@@ -545,66 +535,3 @@ hero-main {
 
 
 
-/* Layout */
-.ai-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Card */
-.ai-card {
-    position: relative;
-    width: 320px;
-    padding: 40px 30px;
-    border-radius: 20px;
-    background: #ffffff;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Lift */
-.ai-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* Mouse Follow Glow */
-.ai-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(124, 58, 237, 0.25),
-        transparent 60%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.ai-card:hover::before {
-    opacity: 1;
-}
-
-/* Content */
-.ai-card img {
-    width: 70px;
-    margin-bottom: 20px;
-}
-
-.ai-card h2 {
-    color: #7C3AED;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.ai-card p {
-    color: #555;
-    line-height: 1.6;
-}
