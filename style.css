@@ -173,6 +173,10 @@ hero-main {
 
 /* Amazing-AI-Tools styling */
 
+.ai-container {
+    margin-top: 30px;
+}
+
 #Amazing-AI-Tools {
     width: 100%;
     /* height: 100vh; */
@@ -258,7 +262,7 @@ hero-main {
     pointer-events: none;
 }
 
-#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1::before{
+#Amazing-AI-Tools #Amazing-AI-Tools-3-devs #dev1::before {
     opacity: 1;
 }
 
@@ -338,7 +342,7 @@ hero-main {
     border-radius: 20px;
     background: #ffffff;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -347,7 +351,7 @@ hero-main {
 /* Hover Lift */
 .ai-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Mouse Follow Glow */
@@ -355,11 +359,9 @@ hero-main {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(124, 58, 237, 0.25),
-        transparent 60%
-    );
+    background: radial-gradient(250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(124, 58, 237, 0.25),
+            transparent 60%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -408,6 +410,25 @@ hero-main {
     font-size: 6vw;
     font-weight: 900;
     margin-top: 7.8vw;
+    background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: colorMove2 6s linear infinite;
+}
+
+@keyframes colorMove2 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #What-Our-Users-Say #What-Our-Users-Say-text p:nth-child(2) {
@@ -532,6 +553,3 @@ hero-main {
 }
 
 /* Price section */
-
-
-
