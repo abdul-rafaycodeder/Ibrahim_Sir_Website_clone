@@ -12,6 +12,11 @@ html {
   font-size: 16px;
 }
 
+:root {
+  --gradient-text: linear-gradient(230deg, #397dff,#736eff,#925dff,#b849f5,#ca4adb,#d248d0,#e640b2,#f22b92,#f91a6b,#ff0a44);
+  --gradient-btn: linear-gradient(90deg,#3b82f6,#a855f7,#ec4899);
+}
+
 /* make images responsive */
 img {
   max-width: 100%;
@@ -34,6 +39,10 @@ body {
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
+}
+
+body.nav-open {
+  overflow: hidden;
 }
 
 /* Utility container */
@@ -86,16 +95,24 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+body {
+  padding-top: 70px; /* reserve space for fixed header */
 }
 
 .nav-logo h1 {
   font-size: 1.75rem;
   font-weight: 900;
   background: linear-gradient(230deg, #397dff,#736eff,#925dff,#b849f5,#ca4adb,#d248d0,#e640b2,#f22b92,#f91a6b,#ff0a44);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -137,6 +154,7 @@ body {
 /* Global sections spacing */
 section {
   padding: 4rem 0;
+  scroll-margin-top: 80px;
 }
 
 /* Hero section */
@@ -156,6 +174,7 @@ section {
   font-weight: 900;
   margin-bottom: 1rem;
   background: linear-gradient(230deg, #397dff,#736eff,#925dff,#b849f5,#ca4adb,#d248d0,#e640b2,#f22b92,#f91a6b,#ff0a44);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% 300%;
@@ -209,18 +228,19 @@ section {
     margin-top: 30px;
 }
 
-#Amazing-AI-Tools {
+.ai-tools-section {
     width: 100%;
     /* height: 100vh; */
     background-color: rgb(255, 255, 255);
 }
 
-#Amazing-AI-Tools #Amazing-AI-Tools-h1 h1 {
+.ai-tools-section #Amazing-AI-Tools-h1 h1 {
     text-align: center;
     font-size: 6vw;
     font-weight: 900;
     margin-top: 7.8vw;
     background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 300% 300%;
@@ -229,7 +249,7 @@ section {
 }
 
 
-#Amazing-AI-Tools #Amazing-AI-Tools-h1 p:nth-child(2) {
+.ai-tools-section #Amazing-AI-Tools-h1 p:nth-child(2) {
     text-align: center;
     font-size: 1.5vw;
     font-weight: 500;
@@ -333,6 +353,7 @@ section {
     font-weight: 900;
     margin-top: 2rem;
     background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 300% 300%;
@@ -370,7 +391,7 @@ section {
 
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     padding: 20px;
 }
@@ -495,6 +516,7 @@ section {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 10px;
     background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 300% 300%;
@@ -633,6 +655,7 @@ section {
 #logo {
     font-size: 32px;
     background: linear-gradient(90deg, #4a7cff, #a855f7);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
@@ -688,10 +711,16 @@ section {
 #footer-subscribe button {
     padding: 10px 18px;
     border: none;
-    background: linear-gradient(90deg, #4a7cff, #a855f7);
+    background: var(--gradient-btn);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#footer-subscribe button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.1);
 }
 
 #footer-subscribe button:hover {

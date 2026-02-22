@@ -16,10 +16,19 @@ onReady(() => {
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('open');
       navToggle.classList.toggle('open');
+      document.body.classList.toggle('nav-open');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+      navToggle.setAttribute('aria-expanded', expanded);
+    });
 
     // close menu on link click (useful for single‑page nav)
     navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open');
+        document.body.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
