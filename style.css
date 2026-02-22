@@ -560,3 +560,139 @@ hero-main {
 }
 
 /* Price section */
+
+
+/* Section */
+.pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.pricing-title {
+    font-size: 6vw;
+    margin-bottom: 10px;
+    background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: colorMove3 6s linear infinite;
+}
+
+@keyframes colorMove3 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.pricing-subtitle {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Container */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.pricing-card {
+    background: #fff;
+    padding: 40px 30px;
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+.pricing-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Popular Plan */
+.popular {
+    border: 2px solid #7C3AED;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #7C3AED;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* Price */
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #7C3AED;
+}
+
+.price span {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Features */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    margin: 10px 0;
+    color: #444;
+}
+
+/* Button */
+.price-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #eee;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+
+
+/* Gradient Button */
+.gradient {
+    /* background: linear-gradient(90deg, #7C3AED, #A855F7); */
+    color: #fff;
+    background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+    /* -webkit-text-fill-color: transparent; */
+    background-size: 300% 300%;
+    animation: colorMove3 2s linear infinite;
+}
+
+.gradient:hover {
+    transform: scale(1.05);
+     background: linear-gradient(230deg, #397DFF, #736EFF, #925DFF, #B849F5, #CA4ADB, #D248D0, #E640B2, #F22B92, #F91A6B, #FF0A44);
+     background-size: 300% 300%;
+}
