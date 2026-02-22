@@ -1,5 +1,29 @@
-// You can add click effect or modal later
-document.addEventListener('DOMContentLoaded', () => {
+// DOM ready helpers
+function onReady(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+onReady(() => {
+  // navigation toggle for mobile
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      navToggle.classList.toggle('open');
+
+    // close menu on link click (useful for single‑page nav)
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+  }
+
+  // simple card interaction
   const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
@@ -13,21 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Enter') card.click();
     });
   });
-});
 
-
-const cards = document.querySelectorAll(".ai-card");
-
-cards.forEach(card => {
-  card.addEventListener("mousemove", function (e) {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    card.style.setProperty("--mouse-x", x + "px");
-    card.style.setProperty("--mouse-y", y + "px");
+  // interactive AI cards with mouse-follow effect
+  const aiCards = document.querySelectorAll('.ai-card');
+  aiCards.forEach(card => {
+    card.addEventListener('mousemove', function (e) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+    });
   });
 });
+
+
 
 // Footer section
 
