@@ -912,6 +912,25 @@ section {
     }
 
 
+
+
+
+    .ai-container .ai-card h2 {
+        font-size: 2rem;
+    }
+
+    .ai-container .ai-card p {
+        font-size: 1.3rem;
+    }
+
+    .testimonials-section #What-Our-Users-Say-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .testimonials-section #What-Our-Users-Say-text p:nth-child(2) {
+        font-size: 1rem;
+    }
+
     .cards-wrapper {
         grid-template-columns: 1fr;
         padding: 10px;
@@ -925,22 +944,6 @@ section {
     #container {
         flex-direction: column;
         align-items: center;
-    }
-
-
-    .ai-container .ai-card h2 {
-        font-size: 2rem;
-    }
-    .ai-container .ai-card p {
-        font-size:1.3rem;
-    }
-
-    .testimonials-section #What-Our-Users-Say-text h1 {
-        font-size: 2.6rem;
-    }
-
-    .testimonials-section #What-Our-Users-Say-text p:nth-child(2)    {
-        font-size: 2.6rem;
     }
 }
 
