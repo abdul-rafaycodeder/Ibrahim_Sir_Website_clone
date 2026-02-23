@@ -53,9 +53,11 @@ body.nav-open {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 300% 300%;
+}
 
-
-
+#text-container-hero #h5 {
+    font-size: 70px;
+    color: #397dff;
 }
 
 @keyframes fadeIn {
@@ -147,7 +149,6 @@ body.nav-open {
 
 body {
     padding-top: 70px;
-    /* reserve space for fixed header */
 }
 
 .nav-logo h1 {
@@ -239,10 +240,11 @@ section {
 } */
 
 .hero-section h1 {
+    color: #397DFF;
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     margin-bottom: 1rem;
-    background: linear-gradient(230deg, #397dff, #736eff, #925dff, #b849f5, #ca4adb, #d248d0, #e640b2, #f22b92, #f91a6b, #ff0a44);
+    /* background: linear-gradient(230deg, #397dff, #736eff, #925dff, #b849f5, #ca4adb, #d248d0, #e640b2, #f22b92, #f91a6b, #ff0a44); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -250,12 +252,12 @@ section {
     animation: colorMove 6s linear infinite;
 }
 
-.hero-section h5 {
+/* .hero-section h5 {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     color: #666;
     font-weight: 500;
     margin-bottom: 2rem;
-}
+} */
 
 .hero-buttons {
     display: flex;
