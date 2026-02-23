@@ -902,6 +902,18 @@ line-height: 30px;
         width: 100%;
         padding: 20px;
     }
+/* 
+    #Amazing-AI-Tools-h1 h1 {
+        font-size: 5vw;
+    } */
+
+    .ai-tools-section #Amazing-AI-Tools-h1 h1 {
+        font-size: 3rem;
+    }
+    .ai-tools-section #Amazing-AI-Tools-h1 p:nth-child(2) {
+        font-size: 1.25rem;
+    }
+   
 
     .cards-wrapper {
         grid-template-columns: 1fr;
