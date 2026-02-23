@@ -42,13 +42,13 @@ body.nav-open {
     background: linear-gradient(230deg, #397dff, #736eff, #925dff, #b849f5, #ca4adb, #d248d0, #e640b2, #f22b92, #f91a6b, #ff0a44);
     background-clip: text;
     background-size: 300% 300%;
-    animation: fadeIn2 3s infinite ease-in-out;
+    animation: fadeIn2 3.5s infinite ease-in-out;
 }
 
 @keyframes fadeIn2 {
     0% {
         font-size: 10px;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 
     25% {
@@ -58,7 +58,7 @@ body.nav-open {
 
     50% {
         font-size: 10px;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 
     75% {
@@ -68,7 +68,7 @@ body.nav-open {
 
     100% {
         font-size: 10px;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 
 }
@@ -124,8 +124,10 @@ body.nav-open {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: #ffffff9d;
+    background-image: url(./images/backImage.png);
+
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
 }
 
 body {
@@ -180,6 +182,8 @@ body {
 section {
     padding: 4rem 0;
     scroll-margin-top: 80px;
+    margin-top: 50px;
+
 }
 
 /* Hero section */
@@ -228,13 +232,25 @@ section {
     /* background: linear-gradient(230deg, #397dff, #736eff, #925dff, #b849f5, #ca4adb, #d248d0, #e640b2, #f22b92, #f91a6b, #ff0a44); */
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-size: 300% 300%;
     animation: colorMove 6s linear infinite;
 }
 
-#rafay{
+.rafay {
+line-height: 30px;
     color: black;
+}
+
+#rafay2 {
+    font-size: 5vw;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(230deg, #397dff, #736eff, #925dff, #b849f5, #ca4adb, #d248d0, #e640b2, #f22b92, #f91a6b, #ff0a44);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: colorMove 0s linear infinite;
 }
 
 .hero-section h5 {
@@ -245,6 +261,7 @@ section {
 }
 
 .hero-buttons {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -303,6 +320,7 @@ section {
 /* Amazing-AI-Tools styling */
 
 .ai-container {
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -348,6 +366,7 @@ section {
 
 /* Card */
 .ai-card {
+    text-align: center;
     position: relative;
     width: 320px;
     padding: 40px 30px;
@@ -357,15 +376,18 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.6s ease forwards;
 }
 
+.ai-card{
+   /* margin: auto; */
+}
+
 /* Hover Lift */
 .ai-card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
