@@ -934,6 +934,14 @@ section {
     .ai-container .ai-card p {
         font-size:1.3rem;
     }
+
+    .testimonials-section #What-Our-Users-Say-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .testimonials-section #What-Our-Users-Say-text p:nth-child(2)    {
+         font-size: 1rem;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 991px) {
