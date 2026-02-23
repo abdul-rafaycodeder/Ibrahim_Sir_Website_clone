@@ -233,8 +233,12 @@ section {
     animation: colorMove 6s linear infinite;
 }
 
+#rafay{
+    color: black;
+}
+
 .hero-section h5 {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: 1.5vw;
     color: #666;
     font-weight: 500;
     margin-bottom: 2rem;
