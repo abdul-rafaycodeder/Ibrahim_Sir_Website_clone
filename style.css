@@ -926,6 +926,14 @@ section {
         flex-direction: column;
         align-items: center;
     }
+
+
+    .ai-container .ai-card h2 {
+        font-size: 2.3rem;
+    }
+    .ai-container .ai-card p {
+        font-size:1.3rem;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 991px) {
