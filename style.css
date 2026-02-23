@@ -454,7 +454,7 @@ section {
     animation: colorMove2 6s linear infinite;
 }
 
-@keyframes colorMove2 {
+/* @keyframes colorMove2 {
     0% {
         background-position: 0% 50%;
     }
@@ -466,7 +466,7 @@ section {
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 .testimonials-section #What-Our-Users-Say-text p:nth-child(2) {
     text-align: center;
