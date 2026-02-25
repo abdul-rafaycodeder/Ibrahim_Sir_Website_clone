@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PersonalAI - Authentication</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-left">
+        <h1>Personal<span>AI</span></h1>
+        <p>Powerful AI tools to boost your creativity and productivity.</p>
+    </div>
+
+    <div class="auth-box">
+
+        <div class="form-container">
+
+            <!-- Sign In Form -->
+            <form id="loginForm" class="form active">
+                <h2>Sign In</h2>
+
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign In</button>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <span onclick="switchForm()">Sign Up</span>
+                </p>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="registerForm" class="form">
+                <h2>Create Account</h2>
+
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign Up</button>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <span onclick="switchForm()">Sign In</span>
+                </p>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

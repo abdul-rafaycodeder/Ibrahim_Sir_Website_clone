@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalAI Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">PersonalAI</h2>
+
+        <div class="profile">
+            <img src="https://i.pravatar.cc/100" alt="user">
+            <h3>abdul rafay</h3>
+            <span class="plan">Free Plan</span>
+        </div>
+
+        <ul class="menu">
+            <li class="active"><i class="fa fa-home"></i> Dashboard</li>
+            <li><i class="fa fa-pen"></i> Write Article</li>
+            <li><i class="fa fa-hashtag"></i> Blog Titles</li>
+            <li><i class="fa fa-image"></i> Generate Images</li>
+            <li><i class="fa fa-eraser"></i> Remove Background</li>
+            <li><i class="fa fa-scissors"></i> Remove Object</li>
+            <li><i class="fa fa-file"></i> Review Resume</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <h1>Dashboard</h1>
+        <p class="subtitle">Monitor your creative progress and manage your projects</p>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon purple"><i class="fa fa-sparkles"></i></div>
+                <h4>Total Creations</h4>
+                <h2 id="total">0</h2>
+                <span class="status active">Active</span>
+            </div>
+
+            <div class="card">
+                <div class="card-icon orange"><i class="fa fa-gem"></i></div>
+                <h4>Subscription Plan</h4>
+                <h2>Free Tier</h2>
+                <span class="status current">Current</span>
+            </div>
+
+            <div class="card">
+                <div class="card-icon green"><i class="fa fa-chart-line"></i></div>
+                <h4>This Month</h4>
+                <h2 id="month">0</h2>
+                <span class="status recent">Recent</span>
+            </div>
+
+        </div>
+
+        <h2 class="recent">Recent Creations</h2>
+        <p class="subtitle">Your latest projects and creative work</p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

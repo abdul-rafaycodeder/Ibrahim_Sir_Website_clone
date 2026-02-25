@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+}
+
+/* Container */
+.auth-container {
+    width: 900px;
+    height: 550px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Left Section */
+.auth-left {
+    flex: 1;
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-left h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.auth-left span {
+    color: #ff4ecd;
+}
+
+.auth-left p {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Right Box */
+.auth-box {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 100%;
+    display: none;
+    animation: fade 0.4s ease;
+}
+
+.form.active {
+    display: block;
+}
+
+.form h2 {
+    margin-bottom: 25px;
+}
+
+/* Input */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #777;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(45deg,#3b82f6,#a855f7);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+/* Switch Text */
+.switch-text {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.switch-text span {
+    color: #a855f7;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .auth-container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+    .auth-left {
+        text-align: center;
+        padding: 30px;
+    }
+}
