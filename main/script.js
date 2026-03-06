@@ -1,21 +1,18 @@
-// Simple dashboard animation counter
+const menuItems = document.querySelectorAll('.menu li');
+const sections = document.querySelectorAll('.section');
 
-function animateValue(id, start, end, duration) {
-    let range = end - start;
-    let current = start;
-    let increment = end > start ? 1 : -1;
-    let stepTime = Math.abs(Math.floor(duration / range));
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
 
-    let obj = document.getElementById(id);
-    let timer = setInterval(function () {
-        current += increment;
-        obj.textContent = current;
-        if (current == end) {
-            clearInterval(timer);
-        }
-    }, stepTime);
-}
+        const target = item.getAttribute('data-section');
+        if (!target) return;
 
-// Example values
-animateValue("total", 0, 12, 800);
-animateValue("month", 0, 5, 800);
+        // Remove active class
+        menuItems.forEach(i => i.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        // Add active
+        item.classList.add('active');
+        document.getElementById(target).classList.add('active');
+    });
+});
