@@ -85,8 +85,8 @@ function signIn() {
             const user = userCredential.user;
             if (user) {
                 alert("Sign In Successfully")
-
                 location.href = "../main/index.html"
+                return
             }
 
         })
@@ -94,64 +94,29 @@ function signIn() {
             const errorCode = error.code;
             const errorMessage = error.message;
 
-            if (errorCode) {
-                alert('wrong password')
+            if (errorCode === "auth/email-already-in-use") {
+                alert("Email already registered")
             }
-
-
-
+            if (errorCode === "auth/invalid-email") {
+                alert("Invalid Email")
+            }
+            else if (errorCode) {
+                alert('wrong password and gmail')
+            }
         });
-
 }
 
-// function signIn() {
-
-//     const SignInemail = document.getElementById('SignInEmail').value
-//     const SignInpassword = document.getElementById('SignInPassword').value
-
-//     // Weak password check
-//     if (SignInpassword.length < 6) {
-//         alert("Weak password (minimum 6 characters required)")
-//         return
-//     }
-
-//     // Check if already logged in
-//     if (auth.currentUser) {
-//         alert("App already login")
-//         location.href = "../main/index.html"
-//         return
-//     }
-
-//     signInWithEmailAndPassword(auth, SignInemail, SignInpassword)
-//         .then((userCredential) => {
-
-//             const user = userCredential.user;
-
-//             if (user) {
-//                 alert("Sign In Successfully")
-//                 location.href = "../main/index.html"
-//             }
-
-//         })
-//         .catch((error) => {
-
-//             const errorCode = error.code;
-
-//             if (errorCode === "auth/wrong-password") {
-//                 alert("Wrong Password")
-//             }
-//             else if (errorCode === "auth/user-not-found") {
-//                 alert("User Not Found")
-//             }
-//             else if (errorCode === "auth/invalid-email") {
-//                 alert("Invalid Email")
-//             }
-//             else {
-//                 alert(error.message)
-//             }
-
-//         });
-
+// if (errorCode === "auth/wrong-password") {
+//     alert("Wrong Password")
+// }
+// else if (errorCode === "auth/user-not-found") {
+//     alert("User Not Found")
+// }
+// else if (errorCode === "auth/invalid-email") {
+//     alert("Invalid Email")
+// }
+// else {
+//     alert(error.message)
 // }
 
 // -------------------------------------------------Contine with google------------------------------------------//
