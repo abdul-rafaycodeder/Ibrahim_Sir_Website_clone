@@ -39,23 +39,37 @@ function signUp() {
         alert("Weak Password (minimum 6 characters required)")
         return
     }
-
     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            console.log(user)
+            // console.log(user)
             if (user) {
                 alert("Create Account Successfully")
                 // location.href = "../main/index.html"
             }
+            if (document.getElementById('signUpPassword')){
+                SignUpPassWord.in
+            }
+        
+
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            if (errorCode) {
-                alert('You are already login')
+            if (errorCode === "auth/email-already-in-use") {
+                alert("Email already registered")
             }
+            else if (errorCode === "auth/invalid-email") {
+                alert("Invalid Email Address")
+            }
+            else if (errorCode === "auth/weak-password") {
+                alert("Weak Password")
+            }
+            else {
+                alert(error.message)
+            }
+
         });
 }
 
