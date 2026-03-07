@@ -94,13 +94,23 @@ body {
     line-height: 70px;
 }
 
-.card {
-    /* flex: 1;
+/* .card {
+    flex: 1;
     background: white;
     padding: 25px;
     border-radius: 15px;
     border: none;
-    box-shadow: 0 1px 10px #c7afff; */
+    box-shadow: 0 1px 10px #c7afff;
+} */
+
+.cards {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
     background: #f3f3f5;
     padding: 30px;
     width: 260px;
@@ -112,13 +122,96 @@ body {
     cursor: pointer;
 }
 
+/* Hover Lift Effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Glow Animation */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #7a00ff, #c14bff, #4facfe);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Title */
+.card h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+/* Main Number */
+.card h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Status Badge */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.green {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.blue {
+    background: #dbeafe;
+    color: #1e3a8a;
+}
+
+.purple {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
 .card:nth-child(2) {
     box-shadow: 0 1px 10px #f2cfa4;
+    background: #f3f3f5;
+    padding: 30px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 
 }
 
 .card:nth-child(3) {
     box-shadow: 0 1px 10px #aaefd8;
+    background: #f3f3f5;
+    padding: 30px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 
 }
 
