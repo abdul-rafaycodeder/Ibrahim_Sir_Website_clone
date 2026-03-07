@@ -200,7 +200,10 @@ body {
     cursor: pointer;
 
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 .card:nth-child(3) {
     box-shadow: 0 1px 10px #aaefd8;
     background: #f3f3f5;
