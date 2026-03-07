@@ -3,7 +3,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import {
     getAuth,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
 
@@ -52,4 +53,23 @@ function signUp() {
 
 // -------------------------------------------------Sign In------------------------------------------//
 
+const SignInButton = document.getElementById('SignInbtn');
 
+SignInButton.addEventListener('click', signIn)
+
+function signIn() {
+    const SignInemail = document.getElementById('SignInEmail').value
+    const SignInpassword = document.getElementById('SignInPassword').value
+
+    signInWithEmailAndPassword(auth, SignInemail, SignInpassword)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+
+}
