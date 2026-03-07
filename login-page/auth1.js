@@ -1,8 +1,5 @@
 // -------------------------------------------------Sign Up------------------------------------------//
 
-import dotenv from "dotenv"
-dotenv.config()
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import {
     getAuth,
@@ -12,7 +9,7 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: "AIzaSyA8DIvSCEDnYWzBeic7Dx25bkUcfhBlx3A",
     authDomain: "personal-ai-clone-ibrahim-sir.firebaseapp.com",
     projectId: "personal-ai-clone-ibrahim-sir",
     storageBucket: "personal-ai-clone-ibrahim-sir.firebasestorage.app",
