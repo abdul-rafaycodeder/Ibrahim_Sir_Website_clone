@@ -39,6 +39,7 @@ function signUp() {
         alert("Weak Password (minimum 6 characters required)")
         return
     }
+
     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
         .then((userCredential) => {
             // Signed up 
@@ -48,11 +49,6 @@ function signUp() {
                 alert("Create Account Successfully")
                 // location.href = "../main/index.html"
             }
-            if (document.getElementById('signUpPassword')){
-                SignUpPassWord.in
-            }
-        
-
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -72,48 +68,6 @@ function signUp() {
 
         });
 }
-
-// function signUp() {
-
-//     const SignUpemail = document.getElementById('signUpEmale').value
-//     const SignUpPassWord = document.getElementById('signUpPassword').value
-
-//     // Password length check
-// if (SignUpPassWord.length < 6) {
-//     alert("Weak Password (minimum 6 characters required)")
-//     return
-// }
-
-//     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
-//         .then((userCredential) => {
-
-//             const user = userCredential.user;
-
-//             if (user) {
-//                 alert("Create Account Successfully")
-//                 location.href = "../main/index.html"
-//             }
-
-//         })
-//         .catch((error) => {
-
-//             const errorCode = error.code;
-
-//             if (errorCode === "auth/email-already-in-use") {
-//                 alert("Email already registered")
-//             }
-//             else if (errorCode === "auth/invalid-email") {
-//                 alert("Invalid Email Address")
-//             }
-//             else if (errorCode === "auth/weak-password") {
-//                 alert("Weak Password")
-//             }
-//             else {
-//                 alert(error.message)
-//             }
-
-//         });
-// }
 
 // -------------------------------------------------Sign In------------------------------------------//
 
