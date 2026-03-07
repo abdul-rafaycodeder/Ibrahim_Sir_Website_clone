@@ -25,28 +25,70 @@ const signUpButton = document.getElementById('signUpBtn');
 
 signUpButton.addEventListener('click', signUp);
 
+// function signUp() {
+//     // const SignUpName = document.getElementById('signUpFullName').value
+//     const SignUpemail = document.getElementById('signUpEmale').value
+//     const SignUpPassWord = document.getElementById('signUpPassword').value
+
+//     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
+//         .then((userCredential) => {
+//             // Signed up 
+//             const user = userCredential.user;
+
+//             if (user) {
+//                 alert("Create Account Successfully")
+
+//                 location.href = "../main/index.html"
+//             }
+//         })
+//         .catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+//             if (errorCode) {
+//                 alert('Weak password')
+//             }
+//         });
+// }
+
 function signUp() {
-    // const SignUpName = document.getElementById('signUpFullName').value
+
     const SignUpemail = document.getElementById('signUpEmale').value
     const SignUpPassWord = document.getElementById('signUpPassword').value
 
+    // Password length check
+    if (SignUpPassWord.length < 6) {
+        alert("Weak Password (minimum 6 characters required)")
+        return
+    }
+
     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
         .then((userCredential) => {
-            // Signed up 
+
             const user = userCredential.user;
 
             if (user) {
                 alert("Create Account Successfully")
-
                 location.href = "../main/index.html"
             }
+
         })
         .catch((error) => {
+
             const errorCode = error.code;
-            const errorMessage = error.message;
-            if (errorCode) {
-                alert('Weak password')
+
+            if (errorCode === "auth/email-already-in-use") {
+                alert("Email already registered")
             }
+            else if (errorCode === "auth/invalid-email") {
+                alert("Invalid Email Address")
+            }
+            else if (errorCode === "auth/weak-password") {
+                alert("Weak Password")
+            }
+            else {
+                alert(error.message)
+            }
+
         });
 }
 
@@ -56,28 +98,82 @@ const SignInButton = document.getElementById('SignInbtn');
 
 SignInButton.addEventListener('click', signIn)
 
+// function signIn() {
+//     const SignInemail = document.getElementById('SignInEmail').value
+//     const SignInpassword = document.getElementById('SignInPassword').value
+
+//     signInWithEmailAndPassword(auth, SignInemail, SignInpassword)
+//         .then((userCredential) => {
+//             // Signed in 
+//             const user = userCredential.user;
+//             if (user) {
+//                 alert("Sign In Successfully")
+
+//                 location.href = "../main/index.html"
+//             }
+
+//         })
+//         .catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+
+//             if (errorCode) {
+//                 alert('wrong password')
+//             }
+
+
+
+//         });
+
+// }
+
+
 function signIn() {
+
     const SignInemail = document.getElementById('SignInEmail').value
     const SignInpassword = document.getElementById('SignInPassword').value
 
+    // Weak password check
+    if (SignInpassword.length < 6) {
+        alert("Weak password (minimum 6 characters required)")
+        return
+    }
+
+    // Check if already logged in
+    if (auth.currentUser) {
+        alert("App already login")
+        location.href = "../main/index.html"
+        return
+    }
+
     signInWithEmailAndPassword(auth, SignInemail, SignInpassword)
         .then((userCredential) => {
-            // Signed in 
+
             const user = userCredential.user;
+
             if (user) {
                 alert("Sign In Successfully")
-
-                location.href = "https://github.com/abdul-rafaycodeder/User_Full_Authentication_Firebase-/blob/main/script.js"
+                location.href = "../main/index.html"
             }
 
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
 
-            if (errorCode) {
-                alert('wrong password')
+            const errorCode = error.code;
+
+            if (errorCode === "auth/wrong-password") {
+                alert("Wrong Password")
             }
+            else if (errorCode === "auth/user-not-found") {
+                alert("User Not Found")
+            }
+            else if (errorCode === "auth/invalid-email") {
+                alert("Invalid Email")
+            }
+            else {
+                alert(error.message)
+            }
+
         });
 
 }
