@@ -19,7 +19,7 @@ body {
     width: 260px;
     background: white;
     padding: 25px;
-    box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -89,12 +89,37 @@ body {
     margin-top: 25px;
 }
 
+#dashboard h2 {
+    font-size: 35px;
+    line-height: 70px;
+}
+
 .card {
-    flex: 1;
+    /* flex: 1;
     background: white;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: none;
+    box-shadow: 0 1px 10px #c7afff; */
+    background: #f3f3f5;
+    padding: 30px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:nth-child(2) {
+    box-shadow: 0 1px 10px #f2cfa4;
+
+}
+
+.card:nth-child(3) {
+    box-shadow: 0 1px 10px #aaefd8;
+
 }
 
 .card h1 {
@@ -107,9 +132,20 @@ body {
     font-size: 12px;
 }
 
-.green { background: #d1fae5; color: #065f46; }
-.blue { background: #dbeafe; color: #1e3a8a; }
-.purple { background: #ede9fe; color: #5b21b6; }
+.green {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.blue {
+    background: #dbeafe;
+    color: #1e3a8a;
+}
+
+.purple {
+    background: #ede9fe;
+    color: #5b21b6;
+}
 
 input {
     width: 100%;

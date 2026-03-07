@@ -38,8 +38,7 @@ function signUp() {
             if (user) {
                 alert("Create Account Successfully")
 
-                SignUpemail = ''
-                SignUpPassWord = ''
+                location.href = "../main/index.html"
             }
         })
         .catch((error) => {
@@ -65,11 +64,20 @@ function signIn() {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            // ...
+            if (user) {
+                alert("Sign In Successfully")
+
+                location.href = "https://github.com/abdul-rafaycodeder/User_Full_Authentication_Firebase-/blob/main/script.js"
+            }
+
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+
+            if (errorCode) {
+                alert('wrong password')
+            }
         });
 
 }
