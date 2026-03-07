@@ -4,8 +4,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/fireba
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    // GoogleAuthProvider
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+const provider = new GoogleAuthProvider();
 
 
 const firebaseConfig = {
@@ -131,7 +136,6 @@ function signIn() {
 
 }
 
-
 // function signIn() {
 
 //     const SignInemail = document.getElementById('SignInEmail').value
@@ -181,3 +185,25 @@ function signIn() {
 //         });
 
 // }
+
+// -------------------------------------------------Contine with google------------------------------------------//
+
+
+const googleBtn = document.getElementById('google');
+
+googleBtn.addEventListener('click', contineWithGoogle)
+
+function contineWithGoogle() {
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            const user = result.user;
+            console.log(user)
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.customData.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
+        });
+}
