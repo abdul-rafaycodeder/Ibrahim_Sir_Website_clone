@@ -17,12 +17,12 @@ body {
 .auth-container {
     width: 900px;
     height: 550px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 20px;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Left Section */
@@ -104,7 +104,7 @@ body {
     cursor: pointer;
     font-size: 15px;
     color: #fff;
-    background: linear-gradient(45deg,#3b82f6,#a855f7);
+    background: linear-gradient(45deg, #3b82f6, #a855f7);
     transition: 0.3s;
 }
 
@@ -126,19 +126,59 @@ body {
 }
 
 @keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Responsive */
-@media(max-width: 768px){
+@media(max-width: 768px) {
     .auth-container {
         flex-direction: column;
         height: auto;
         width: 95%;
     }
+
     .auth-left {
         text-align: center;
         padding: 30px;
     }
+}
+
+/* contoine with google */
+
+
+.google-btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.google-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.google-btn:hover {
+    background: #f7f7f7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.google-btn:active {
+    transform: scale(0.97);
 }

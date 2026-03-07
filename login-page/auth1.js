@@ -30,22 +30,26 @@ function signUp() {
     const SignUpemail = document.getElementById('signUpEmale').value
     const SignUpPassWord = document.getElementById('signUpPassword').value
 
+    if (SignUpPassWord.length < 6) {
+        alert("Weak Password (minimum 6 characters required)")
+        return
+    }
+
     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-
+            console.log(user)
             if (user) {
                 alert("Create Account Successfully")
-
-                location.href = "../main/index.html"
+                // location.href = "../main/index.html"
             }
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             if (errorCode) {
-                alert('Weak password')
+                alert('You are already login')
             }
         });
 }
@@ -56,10 +60,10 @@ function signUp() {
 //     const SignUpPassWord = document.getElementById('signUpPassword').value
 
 //     // Password length check
-//     if (SignUpPassWord.length < 6) {
-//         alert("Weak Password (minimum 6 characters required)")
-//         return
-//     }
+// if (SignUpPassWord.length < 6) {
+//     alert("Weak Password (minimum 6 characters required)")
+//     return
+// }
 
 //     createUserWithEmailAndPassword(auth, SignUpemail, SignUpPassWord)
 //         .then((userCredential) => {
