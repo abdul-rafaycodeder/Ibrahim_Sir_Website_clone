@@ -9,7 +9,7 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA8DIvSCEDnYWzBeic7Dx25bkUcfhBlx3A",
+    apiKey: process.env.API_KEY,
     authDomain: "personal-ai-clone-ibrahim-sir.firebaseapp.com",
     projectId: "personal-ai-clone-ibrahim-sir",
     storageBucket: "personal-ai-clone-ibrahim-sir.firebasestorage.app",
