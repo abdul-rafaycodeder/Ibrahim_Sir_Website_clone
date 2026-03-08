@@ -121,22 +121,50 @@ function signIn() {
 
 // -------------------------------------------------Contine with google------------------------------------------//
 
-
+// const getStartedbutton = document.getElementById('getStartedBtn');
 const googleBtn = document.getElementById('google');
 
 googleBtn.addEventListener('click', contineWithGoogle)
 
+// function contineWithGoogle() {
+//     signInWithPopup(auth, provider)
+//         .then((result) => {
+//             const credential = GoogleAuthProvider.credentialFromResult(result);
+//             const token = credential.accessToken;
+//             const user = result.user.photoURL;
+//             getStartedbutton.innerHTML = user.photoURL
+//             console.log(user)
+//         }).catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+//             const email = error.customData.email;
+//             const credential = GoogleAuthProvider.credentialFromError(error);
+//         });
+// }
+
+
 function contineWithGoogle() {
     signInWithPopup(auth, provider)
         .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
+
             const user = result.user;
-            console.log(user)
+if (user) {
+    location.href = "../index.html"
+    getStartedbutton.className = 'love'
+}
+            // button ko select karo
+            const getStartedbutton = document.getElementById("getStartedBtn");
+
+            // email aur photo set karo
+            getStartedbutton.innerHTML = `
+                <img src="${user.photoURL}" style="width:30px;height:30px;border-radius:50%;margin-right:8px;">
+                ${user.email}
+            `;
+
+            console.log(user.email);
+            console.log(user.photoURL);
+
         }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.customData.email;
-            const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(error.message);
         });
 }
