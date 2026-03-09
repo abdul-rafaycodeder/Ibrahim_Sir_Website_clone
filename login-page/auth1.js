@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signInBtn = document.getElementById("SignInbtn");
     const googleBtn = document.getElementById("google");
     const startBtn = document.getElementById("startBtn");
+    const startbutton = document.getElementById("startBtn2");
 
 
     if (signUpBtn) {
@@ -384,3 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
