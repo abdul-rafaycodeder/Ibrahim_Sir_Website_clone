@@ -152,7 +152,7 @@ body {
 /* contoine with google */
 
 .love{
-    display: none;
+    visibility: hidden;
 }
 .google-btn {
     margin-top: 20px;

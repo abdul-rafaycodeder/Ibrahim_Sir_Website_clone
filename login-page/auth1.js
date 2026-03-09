@@ -5,9 +5,9 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    onAuthStateChanged,
     GoogleAuthProvider,
-    signInWithPopup,
-    // GoogleAuthProvider
+    signInWithPopup
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
 const provider = new GoogleAuthProvider();
@@ -72,6 +72,7 @@ function signUp() {
 // -------------------------------------------------Sign In------------------------------------------//
 
 const SignInButton = document.getElementById('SignInbtn');
+const getStartedbutton = document.getElementById('getStartedBtn');
 
 SignInButton.addEventListener('click', signIn)
 
@@ -81,30 +82,50 @@ function signIn() {
 
     signInWithEmailAndPassword(auth, SignInemail, SignInpassword)
         .then((userCredential) => {
-            // Signed in 
+
             const user = userCredential.user;
+
             if (user) {
-                alert("Sign In Successfully")
-                location.href = "../main/index.html"
-                return
+                alert("Sign In Successfully");
+                location.href = "../main/index.html";
             }
 
         })
         .catch((error) => {
+
             const errorCode = error.code;
-            const errorMessage = error.message;
 
             if (errorCode === "auth/email-already-in-use") {
-                alert("Email already registered")
+                alert("Email already registered");
             }
-            if (errorCode === "auth/invalid-email") {
-                alert("Invalid Email")
+            else if (errorCode === "auth/invalid-email") {
+                alert("Invalid Email");
             }
-            else if (errorCode) {
-                alert('wrong password and gmail')
+            else {
+                alert("Incorrect Email or Password");
             }
+
         });
 }
+
+// Get Started Button Logic
+getStartedbutton.addEventListener("click", function (e) {
+    e.preventDefault(); // link ka default behavior stop karega
+
+    onAuthStateChanged(auth, (user) => {
+
+        if (user) {
+            // user login hai
+            window.location.href = "../main/index.html";
+        }
+        else {
+            // user login nahi hai
+            window.location.href = "../login-page/index.html";
+        }
+
+    });
+
+});
 
 // if (errorCode === "auth/wrong-password") {
 //     alert("Wrong Password")
@@ -121,50 +142,52 @@ function signIn() {
 
 // -------------------------------------------------Contine with google------------------------------------------//
 
-// const getStartedbutton = document.getElementById('getStartedBtn');
+
 const googleBtn = document.getElementById('google');
 
 googleBtn.addEventListener('click', contineWithGoogle)
 
-// function contineWithGoogle() {
-//     signInWithPopup(auth, provider)
-//         .then((result) => {
-//             const credential = GoogleAuthProvider.credentialFromResult(result);
-//             const token = credential.accessToken;
-//             const user = result.user.photoURL;
-//             getStartedbutton.innerHTML = user.photoURL
-//             console.log(user)
-//         }).catch((error) => {
-//             const errorCode = error.code;
-//             const errorMessage = error.message;
-//             const email = error.customData.email;
-//             const credential = GoogleAuthProvider.credentialFromError(error);
-//         });
-// }
-
-
 function contineWithGoogle() {
     signInWithPopup(auth, provider)
         .then((result) => {
-
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
             const user = result.user;
-if (user) {
-    location.href = "../index.html"
-    getStartedbutton.className = 'love'
-}
-            // button ko select karo
-            const getStartedbutton = document.getElementById("getStartedBtn");
 
-            // email aur photo set karo
-            getStartedbutton.innerHTML = `
-                <img src="${user.photoURL}" style="width:30px;height:30px;border-radius:50%;margin-right:8px;">
-                ${user.email}
-            `;
 
-            console.log(user.email);
-            console.log(user.photoURL);
+            console.log(user)
 
         }).catch((error) => {
-            console.log(error.message);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.customData.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
         });
 }
+
+
+// function contineWithGoogle() {
+//     signInWithPopup(auth, provider)
+//         .then((result) => {
+
+//             const user = result.user;
+//             if (user) {
+//                 location.href = "../index.html"
+//                 getStartedbutton.className = 'love'
+//             }
+//             // button ko select karo
+//             const getStartedbutton = document.getElementById("getStartedBtn");
+
+//             // email aur photo set karo
+//             getStartedbutton.innerHTML = `
+//                 <img src="${user.photoURL}" style="width:30px;height:30px;border-radius:50%;margin-right:8px;">
+//                 ${user.email}
+//             `;
+
+//             console.log(user.email);
+//             console.log(user.photoURL);
+
+//         }).catch((error) => {
+//             console.log(error.message);
+//         });
+// }
