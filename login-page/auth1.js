@@ -72,7 +72,7 @@ function signUp() {
 // -------------------------------------------------Sign In------------------------------------------//
 
 const SignInButton = document.getElementById('SignInbtn');
-const getStartedbutton = document.getElementById('getStartedBtn');
+
 
 SignInButton.addEventListener('click', signIn)
 
@@ -109,23 +109,23 @@ function signIn() {
 }
 
 // Get Started Button Logic
-getStartedbutton.addEventListener("click", function (e) {
-    e.preventDefault(); // link ka default behavior stop karega
 
-    onAuthStateChanged(auth, (user) => {
+const getStartedbutton1 = document.getElementById('getStartButtonHaiYa');
+getStartedbutton1.addEventListener('click', () => {
+  onAuthStateChanged(auth, (user) => {
 
         if (user) {
             // user login hai
-            window.location.href = "../main/index.html";
-        }
+            location.href = "../main/index.html";
+        } 
         else {
             // user login nahi hai
-            window.location.href = "../login-page/index.html";
+            location.href = "../login/login.html";
         }
 
     });
+})
 
-});
 
 // if (errorCode === "auth/wrong-password") {
 //     alert("Wrong Password")
