@@ -127,6 +127,7 @@ getStartedbutton1.addEventListener('click', () => {
 })
 
 
+
 // if (errorCode === "auth/wrong-password") {
 //     alert("Wrong Password")
 // }
