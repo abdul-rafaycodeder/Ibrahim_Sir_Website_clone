@@ -336,6 +336,7 @@ function continueWithGoogle() {
 }
 
 
+
 // ---------------------- PAGE BUTTON EVENTS ----------------------
 
 document.addEventListener("DOMContentLoaded", () => {
