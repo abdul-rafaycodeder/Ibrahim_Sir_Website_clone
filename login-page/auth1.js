@@ -202,7 +202,7 @@
 
 // --------------------------------------------chat gpt code-----------------------------------
 
-// ---------------------- FIREBASE SETUP ----------------------
+//----------------------------------------==> FIREBASE SETUP <==----------------------//
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 
@@ -230,7 +230,7 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 
-// ---------------------- SIGN UP ----------------------
+//----------------------------------------==> SIGN UP <==----------------------//
 
 function signUp() {
 
@@ -273,8 +273,7 @@ function signUp() {
 
 }
 
-
-// ---------------------- SIGN IN ----------------------
+//----------------------------------------==> SIGN IN <==----------------------//
 
 function signIn() {
 
@@ -312,8 +311,7 @@ function signIn() {
 
 }
 
-
-// ---------------------- GOOGLE LOGIN ----------------------
+//----------------------------------------==> GOOGLE LOGIN <==----------------------//
 
 function continueWithGoogle() {
 
@@ -335,9 +333,7 @@ function continueWithGoogle() {
 
 }
 
-
-
-// ---------------------- PAGE BUTTON EVENTS ----------------------
+//----------------------------------------==> PAGE BUTTON <==//EVENTS ----------------------
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -345,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const signInBtn = document.getElementById("SignInbtn");
     const googleBtn = document.getElementById("google");
     const startBtn = document.getElementById("startBtn");
-    const startbutton = document.getElementById("startBtn2");
 
 
     if (signUpBtn) {
