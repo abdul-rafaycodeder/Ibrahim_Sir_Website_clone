@@ -72,7 +72,7 @@
                 </div>
 
 
-                <div class="container2">
+                <!-- <div class="container2">
 
                     <h1>Recent Creations</h1>
                     <p>Your latest projects and creative work</p>
@@ -89,24 +89,24 @@
                             <span>image - 25/02/2026</span>
                         </div>
 
-                        <!-- <div class="item" onclick="showImage('img3.jpg')">
+                        <div class="item" onclick="showImage('img3.jpg')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
-                        </div> -->
+                        </div>
 
-                        <!-- <div class="item" onclick="showImage('img4.jpg')">
+                        <div class="item" onclick="showImage('img4.jpg')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
-                        </div> -->
+                        </div>
 
                     </div>
 
-                    <!-- <div class="preview">
+                    <div class="preview">
                         <img id="previewImage" src="" alt="">
-                    </div> -->
+                    </div>
 
                 </div>
-            </section>
+            </section> -->
 
 
             <!-- Write Article -->
@@ -277,7 +277,11 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        function showImage(src) {
+            document.getElementById('previewImage').src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhIIdrYNs8cQ5PT8RWhuCibOZ7-Pz40GoThQ&s";
+        }
+    </script>
 
 </body>
 
