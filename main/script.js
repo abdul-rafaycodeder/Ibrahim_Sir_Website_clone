@@ -18,3 +18,24 @@ menuItems.forEach(item => {
     });
 
 }); 0
+
+function showImage(img) {
+    document.getElementById("previewImage").src = img;
+}
+
+function generateArticle() {
+    let topic = document.getElementById("articleTopic").value;
+    if (topic === '') {
+        alert('Enter Article topic')
+    }
+}
+
+function generateArticle2() {
+    let topic2 = document.getElementById("articleTopic").value;
+    if (topic2 === '') {
+        alert('Enter Blog  topic')
+    }
+}
+
+
+

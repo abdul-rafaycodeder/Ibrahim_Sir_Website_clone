@@ -35,6 +35,7 @@
 
             </ul>
 
+            <h1>ddsdsdsdsds</h1>
         </aside>
 
 
@@ -72,29 +73,29 @@
                 </div>
 
 
-                <!-- <div class="container2">
+                <div class="container2">
 
                     <h1>Recent Creations</h1>
                     <p>Your latest projects and creative work</p>
 
                     <div class="list">
 
-                        <div class="item" onclick="showImage('img1.jpg')">
+                        <div class="item" onclick="showImage('../images/backImage.png')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
                         </div>
 
-                        <div class="item" onclick="showImage('img2.jpg')">
+                        <div class="item" onclick="showImage('../images/logo 3.avif')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
                         </div>
 
-                        <div class="item" onclick="showImage('img3.jpg')">
+                        <div class="item" onclick="showImage('../images/Screenshot 2.png')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
                         </div>
 
-                        <div class="item" onclick="showImage('img4.jpg')">
+                        <div class="item" onclick="showImage('../images/logo 4.avif')">
                             Remove background from Image
                             <span>image - 25/02/2026</span>
                         </div>
@@ -106,51 +107,75 @@
                     </div>
 
                 </div>
-            </section> -->
+            </section>
 
 
             <!-- Write Article -->
             <section id="write" class="section">
 
-                <h2>Write AI Article</h2>
+                <div id="writeMainDiv">
 
-                <label>Article Topic</label>
-                <input type="text" placeholder="Future of Artificial Intelligence">
+                    <div id="writeMainDiv1">
+                        <div id="writeMainDiv1Text">
+                            <h2>Article Configuration</h2>
+                        </div>
+                        <div id="writeMainDiv1Input">
+                            <p>Article Topic</p>
+                            <input type="text" placeholder="The future of AI is...">
 
-                <label>Article Length</label>
+                        </div>
+                        <div id="writeMainDiv1Length">
+                            <p>Short (500-800 words)</p>
+                            <p>Medium (800-1200 words)</p>
+                            <p>Long (1200+ words)</p>
+                        </div>
+                        <div id="writeMainDiv1Btton">
+                            <button onclick="generateArticle()">Generate Article</button>
+                        </div>
 
-                <div class="options">
-                    <button>Short</button>
-                    <button>Medium</button>
-                    <button>Long</button>
+                    </div>
+
+                    <div id="writeMainDiv2">
+                        <div id="writeMainDiv2Text">
+                            <h2>Generated Article</h2>
+                        </div>
+                    </div>
+
                 </div>
-
-                <button class="primary-btn">Generate Article</button>
-
             </section>
 
 
             <!-- Blog Titles -->
             <section id="blog" class="section">
 
-                <h2>Blog Title Generator</h2>
 
-                <label>Keyword</label>
-                <input type="text" placeholder="Artificial Intelligence">
+                <div id="writeMainDiv">
 
-                <label>Category</label>
+                    <div id="writeMainDiv1">
+                        <div id="writeMainDiv1Text">
+                            <h2>Blog Configuration</h2>
+                        </div>
 
-                <div class="options">
-                    <button>General</button>
-                    <button>Technology</button>
-                    <button>Health</button>
-                    <button>Sport</button>
-                    <button>Travel</button>
-                    <button>Food</button>
+                        <div id="writeMainDiv1Input">
+                            <p>Article Topic</p>
+                            <input id="articleTopic" type="text" placeholder="The future of AI is...">
+
+                        </div>
+                        <div id="writeMainDiv1Length">
+                            <p>Short (500-800 words)</p>
+                            <p>Medium (800-1200 words)</p>
+                            <p>Long (1200+ words)</p>
+                        </div>
+                        <div id="writeMainDiv1Btton">
+                            <button onclick="generateArticle2()">Generated Tile</button>
+                        </div>
+                    </div>
+                    <div id="writeMainDiv2">
+                        <div id="writeMainDiv2Text">
+                            <h2>Generated Blog </h2>
+                        </div>
+                    </div>
                 </div>
-
-                <button class="primary-btn">Generate Titles</button>
-
             </section>
 
 
