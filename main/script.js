@@ -1,12 +1,3 @@
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup
-} from "auth1.js"
-
 const menuItems = document.querySelectorAll(".menu li");
 const sections = document.querySelectorAll(".section");
 

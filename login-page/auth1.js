@@ -218,12 +218,12 @@ import {
 export {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    GoogleAuthProvider,
-    signInWithPopup
-} 
-
+    signInWithEmailAndPassword,   
+    onAuthStateChanged,           
+    GoogleAuthProvider,           
+    
+    signInWithPopup               
+}                                 
 
 const firebaseConfig = {
     apiKey: "AIzaSyA8DIvSCEDnYWzBeic7Dx25bkUcfhBlx3A",
