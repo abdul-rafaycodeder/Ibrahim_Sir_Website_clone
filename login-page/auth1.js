@@ -215,6 +215,15 @@ import {
     signInWithPopup
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
+export {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup
+} 
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyA8DIvSCEDnYWzBeic7Dx25bkUcfhBlx3A",
