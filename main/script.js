@@ -1,18 +1,39 @@
-const menuItems = document.querySelectorAll('.menu li');
-const sections = document.querySelectorAll('.section');
+// const menuItems = document.querySelectorAll('.menu li');
+// const sections = document.querySelectorAll('.section');
+
+// menuItems.forEach(item => {
+//     item.addEventListener('click', () => {
+
+//         const target = item.getAttribute('data-section');
+//         if (!target) return;
+
+//         // Remove active class
+//         menuItems.forEach(i => i.classList.remove('active'));
+//         sections.forEach(s => s.classList.remove('active'));
+
+//         // Add active
+//         item.classList.add('active');
+//         document.getElementById(target).classList.add('active');
+//     });
+// });
+
+const menuItems = document.querySelectorAll(".menu li");
+const sections = document.querySelectorAll(".section");
 
 menuItems.forEach(item => {
-    item.addEventListener('click', () => {
 
-        const target = item.getAttribute('data-section');
-        if (!target) return;
+    item.addEventListener("click", () => {
 
-        // Remove active class
-        menuItems.forEach(i => i.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
+        menuItems.forEach(i => i.classList.remove("active"));
 
-        // Add active
-        item.classList.add('active');
-        document.getElementById(target).classList.add('active');
+        sections.forEach(sec => sec.classList.remove("active"));
+
+        item.classList.add("active");
+
+        const target = item.dataset.section;
+
+        document.getElementById(target).classList.add("active");
+
     });
+
 });

@@ -13,98 +13,168 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
+
             <h1 class="logo">Personal<span>AI</span></h1>
 
             <div class="profile">
-                <img src="https://i.pravatar.cc/100" alt="profile">
+                <img src="https://i.pravatar.cc/100">
                 <h3>abdul rafay</h3>
                 <span class="badge">Free Plan</span>
             </div>
 
             <ul class="menu">
+
                 <li class="active" data-section="dashboard">Dashboard</li>
+
                 <li data-section="write">Write Article</li>
+
                 <li data-section="blog">Blog Titles</li>
-                <li>Generate Images</li>
-                <li>Remove Background</li>
-                <li>Remove Object</li>
+
+                <li data-section="images">Generate Images</li>
+
+                <li data-section="removebg">Remove Background</li>
+
+                <li data-section="removeobj">Remove Object</li>
+
             </ul>
+
         </aside>
+
 
         <!-- Main Content -->
         <main class="content">
 
+
             <!-- Dashboard -->
             <section id="dashboard" class="section active">
+
                 <h2>Dashboard</h2>
-                <p>Monitor your creative progress and manage your projects</p>
+                <p>Monitor your creative progress</p>
 
                 <div class="cards">
+
                     <div class="card">
                         <h4>Total Creations</h4>
                         <h1>25</h1>
                         <span class="status green">Active</span>
                     </div>
-                    <a href="../index.html#pricing">
-                        <div class="card">
-                            <h4>Subscription Plan</h4>
-                            <h1>Free Tier</h1>
-                            <span class="status blue">Current</span>
-                        </div>
-                    </a>
+
+                    <div class="card">
+                        <h4>Subscription Plan</h4>
+                        <h1>Free Tier</h1>
+                        <span class="status blue">Current</span>
+                    </div>
+
                     <div class="card">
                         <h4>This Month</h4>
                         <h1>0</h1>
                         <span class="status purple">Recent</span>
                     </div>
+
                 </div>
+
             </section>
+
 
             <!-- Write Article -->
             <section id="write" class="section">
-                <h2>Article Configuration</h2>
+
+                <h2>Write AI Article</h2>
 
                 <label>Article Topic</label>
-                <input type="text" placeholder="The future of AI is...">
+                <input type="text" placeholder="Future of Artificial Intelligence">
 
                 <label>Article Length</label>
+
                 <div class="options">
-                    <button>Short (500-800 words)</button>
-                    <button>Medium (800-1200 words)</button>
-                    <button>Long (1200+ words)</button>
+                    <button>Short</button>
+                    <button>Medium</button>
+                    <button>Long</button>
                 </div>
 
                 <button class="primary-btn">Generate Article</button>
+
             </section>
+
 
             <!-- Blog Titles -->
             <section id="blog" class="section">
-                <h2>Blog Configuration</h2>
+
+                <h2>Blog Title Generator</h2>
 
                 <label>Keyword</label>
-                <input type="text" placeholder="The future of AI is...">
+                <input type="text" placeholder="Artificial Intelligence">
 
                 <label>Category</label>
+
                 <div class="options">
                     <button>General</button>
+                    <button>Technology</button>
                     <button>Health</button>
                     <button>Sport</button>
-                    <button>Technology</button>
-                    <button>Lifestyle</button>
                     <button>Travel</button>
                     <button>Food</button>
                 </div>
 
-                <button class="primary-btn">Generate Title</button>
+                <button class="primary-btn">Generate Titles</button>
+
             </section>
 
 
-            
+            <!-- Generate Images -->
+            <section id="images" class="section">
+
+                <h2>AI Image Generator</h2>
+
+                <label>Describe Image</label>
+
+                <textarea placeholder="Describe what you want to generate"></textarea>
+
+                <div class="options">
+
+                    <button>Basic</button>
+                    <button>Realistic</button>
+                    <button>3D</button>
+                    <button>Cartoon</button>
+                    <button>Fantasy</button>
+
+                </div>
+
+                <button class="primary-btn">Generate Image</button>
+
+            </section>
+
+
+            <!-- Remove Background -->
+            <section id="removebg" class="section">
+
+                <h2>Remove Image Background</h2>
+
+                <input type="file">
+
+                <button class="primary-btn">Remove Background</button>
+
+            </section>
+
+
+            <!-- Remove Object -->
+            <section id="removeobj" class="section">
+
+                <h2>Remove Object From Image</h2>
+
+                <input type="file">
+
+                <button class="primary-btn">Remove Object</button>
+
+            </section>
+
+
         </main>
+
     </div>
 
+    <script src="script.js"></script>
 
-     <script defer src="script.js"></script>
 </body>
 
 </html>

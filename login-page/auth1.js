@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signInBtn = document.getElementById("SignInbtn");
     const googleBtn = document.getElementById("google");
     const startBtn = document.getElementById("startBtn");
-
+    const startbutton2 = document.getElementById('startBtn2')
 
     if (signUpBtn) {
         signUpBtn.addEventListener("click", signUp);
@@ -361,6 +361,28 @@ document.addEventListener("DOMContentLoaded", () => {
     if (startBtn) {
 
         startBtn.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            onAuthStateChanged(auth, (user) => {
+
+                if (user) {
+                    location.href = "../main/index.html";
+                }
+
+                else {
+                    location.href = "../login-page/index.html";
+                }
+
+            });
+
+        });
+
+    }
+
+    if (startbutton2) {
+
+        startbutton2.addEventListener("click", (e) => {
 
             e.preventDefault();
 

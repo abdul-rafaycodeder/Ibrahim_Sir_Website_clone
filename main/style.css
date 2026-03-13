@@ -14,6 +14,25 @@ body {
     height: 100vh;
 }
 
+textarea {
+
+    width: 100%;
+    height: 120px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    margin-bottom: 20px;
+
+    resize: none;
+
+    font-family: 'Segoe UI';
+
+}
+
 /* Sidebar */
 .sidebar {
     width: 260px;
@@ -200,10 +219,12 @@ body {
     cursor: pointer;
 
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
+
 .card:nth-child(3) {
     box-shadow: 0 1px 10px #aaefd8;
     background: #f3f3f5;
